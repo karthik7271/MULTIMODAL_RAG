@@ -1,6 +1,5 @@
 # Let's create the README.md file content as a string and save it
 
-readme_content = """
 <!-- Badges -->
 <p align="center">
   <img src="https://img.shields.io/badge/AI-Multimodal%20RAG-blueviolet?style=for-the-badge" />
