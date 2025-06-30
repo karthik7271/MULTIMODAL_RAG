@@ -1,50 +1,114 @@
-# Multimodal RAG Pipeline with CLIP, Whisper, and Qwen-VL
+# Let's create the README.md file content as a string and save it
 
-This repository contains a **Multimodal Retrieval-Augmented Generation (RAG) Pipeline** that integrates **images**, **audio**, and **text** for advanced multimodal querying and response generation. The pipeline uses **CLIP** for image embeddings, **Whisper** for audio transcription, **SentenceTransformer** for text embeddings, **ChromaDB** for vector storage, and **Qwen-VL** for multimodal text generation.
+readme_content = """
+<!-- Badges -->
+<p align="center">
+  <img src="https://img.shields.io/badge/AI-Multimodal%20RAG-blueviolet?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Models-CLIP%20%7C%20Whisper%20%7C%20Qwen--VL-ff69b4?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Domain-Generative%20AI-brightgreen?style=for-the-badge" />
+</p>
 
-![Implementing Multi-modal RAG Systems](./Implementing_Multi-modal_RAG_Systems_2.png)
-
----
-
-## Features
-
-- **PDF to Image Conversion**: Extracts images from PDFs for processing.
-- **Image Embedding with CLIP**: Generates embeddings for images using the CLIP model.
-- **Audio Transcription with Whisper**: Transcribes audio files into text chunks.
-- **Text Embedding with SentenceTransformer**: Generates embeddings for transcribed audio chunks.
-- **Vector Storage with ChromaDB**: Stores and retrieves embeddings for images and audio.
-- **Multimodal Querying**: Retrieves relevant images and audio chunks based on a user query.
-- **Multimodal Text Generation with Qwen-VL**: Generates text responses using retrieved images, audio, and the query.
-- **Image and Text Output**: Displays retrieved images and generated text.
+<h1 align="center">🖼️🎙️📜 Multimodal RAG Pipeline 🧠</h1>
+<p align="center"><b>
+A Retrieval-Augmented Generation system integrating images, audio, and text for advanced multimodal AI applications.
+</b></p>
 
 ---
 
-## Pipeline Overview
+## 🌟 Overview
 
-1. **Extract Images from PDFs**: Convert PDFs into images and save them.
-2. **Embed Images using CLIP**: Generate embeddings for the extracted images.
-3. **Store Image Embeddings in ChromaDB**: Store the embeddings in a ChromaDB collection.
-4. **Process Audio**: Transcribe audio files and generate embeddings for the text chunks.
-5. **Store Audio Embeddings in ChromaDB**: Store the embeddings in a ChromaDB collection.
-6. **Retrieve Relevant Data**: Query ChromaDB to retrieve relevant images and audio chunks.
-7. **Display Retrieved Images**: Display the retrieved images to the user.
-8. **Prepare Multimodal Input for Qwen-VL**: Combine retrieved images, audio, and the query.
-9. **Generate Text with Qwen-VL**: Generate a text response using Qwen-VL.
-10. **Output Generated Text**: Display the final generated text.
+This repository implements a **Multimodal Retrieval-Augmented Generation (RAG) Pipeline** capable of processing **images**, **audio**, and **text queries**. It integrates:
 
----
+- 🖼️ **CLIP** for image embeddings  
+- 🎙️ **Whisper** for audio transcription  
+- ✍️ **SentenceTransformer** for text embeddings  
+- 📦 **ChromaDB** for vector storage  
+- 🧠 **Qwen-VL** for multimodal text generation  
 
-### Prerequisites
-- Python 3.8 or higher
-- GPU (recommended for faster processing)
+![Multimodal RAG System](./Implementing_Multi-modal_RAG_Systems_2.png)
 
 ---
 
-### Dependencies
-- pdf2image: For converting PDFs to images.
-- Pillow: For image processing.
-- transformers: For CLIP, Whisper, and Qwen-VL models.
-- sentence-transformers: For text embeddings.
-- chromadb: For vector storage and retrieval.
-- librosa: For audio processing.
-- torch: For deep learning operations.
+## ✨ Features
+
+- 📄 **PDF to Image Conversion**
+- 🖼️ **Image Embedding with CLIP**
+- 🎙️ **Audio Transcription with Whisper**
+- 📝 **Text Embedding with SentenceTransformer**
+- 🗄️ **Vector Storage with ChromaDB**
+- 🔍 **Multimodal Querying**
+- 🧠 **Multimodal Text Generation with Qwen-VL**
+- 🖼️📃 **Image & Text Output Display**
+
+---
+
+## 🛠️ Pipeline Workflow
+
+1. 📄 Extract images from PDFs
+2. 🖼️ Embed images using CLIP
+3. 🗂️ Store image embeddings in ChromaDB
+4. 🎙️ Process & transcribe audio files via Whisper
+5. 📝 Embed transcribed text with SentenceTransformer
+6. 🗂️ Store audio embeddings in ChromaDB
+7. 🔍 Retrieve relevant images and audio chunks from ChromaDB
+8. 🖥️ Display retrieved images
+9. 🧩 Combine retrieved images, audio, and query for Qwen-VL
+10. 🧠 Generate final text response via Qwen-VL
+11. 📃 Display generated text output
+
+---
+
+## 📦 Prerequisites
+
+- Python 3.8 or higher  
+- GPU (recommended for efficient processing)
+
+---
+
+## 📚 Dependencies
+
+- `pdf2image` → PDF to image conversion  
+- `Pillow` → Image processing  
+- `transformers` → CLIP, Whisper, and Qwen-VL models  
+- `sentence-transformers` → Text embedding generation  
+- `chromadb` → Vector storage and retrieval  
+- `librosa` → Audio processing  
+- `torch` → Deep learning framework  
+
+---
+
+## 🤝 Contributing
+
+1. Fork this repo  
+2. Create a new branch  
+3. Implement your changes with documentation  
+4. Add tests where necessary  
+5. Submit a pull request  
+
+---
+
+## ⚖️ License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Built%20with-PyTorch-orange?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Powered%20by-Transformers-764abc?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Multimodal%20AI-Ready-blue?style=flat-square"/>
+</p>
+
+---
+
+<p align="center">
+  <b>⚠️ Disclaimer: For research and educational use only. Not a substitute for professional advice. ⚠️</b>
+</p>
+"""
+
+# Save it as a markdown file
+file_path = "/mnt/data/README.md"
+with open(file_path, "w") as f:
+    f.write(readme_content)
+
+file_path
