@@ -106,9 +106,3 @@ MIT License. See [LICENSE](LICENSE) for details.
 </p>
 """
 
-# Save it as a markdown file
-file_path = "/mnt/data/README.md"
-with open(file_path, "w") as f:
-    f.write(readme_content)
-
-file_path
